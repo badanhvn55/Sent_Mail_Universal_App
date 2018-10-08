@@ -7,26 +7,48 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <DataTemplate x:Name="Normal" x:Key="Normal">
+            <TextBlock Text="{Binding Name}" />
+        </DataTemplate>
+        <DataTemplate x:Name="Detail" x:Key="Detail">
+            <StackPanel>
+                <TextBlock Text="{Binding Name}" FontSize="30" Foreground="Red" HorizontalAlignment="Center" />
+                <TextBlock Text="Details:" FontSize="30" Foreground="Blue" Margin="0,10" />
+                <TextBlock Text="{Binding Details}" FontSize="20" />
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="FromText" VerticalAlignment="Top" Margin="586,68,0,0" Width="302"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="FromText" VerticalAlignment="Top" Margin="286,68,0,0" Width="302"/>
 
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="From" FontSize="20" VerticalAlignment="Top" Margin="510,76,0,0"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="From" FontSize="20" VerticalAlignment="Top" Margin="210,76,0,0"/>
 
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="To" FontSize="20" VerticalAlignment="Top" Margin="510,136,0,0"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="To" FontSize="20" VerticalAlignment="Top" Margin="210,136,0,0"/>
 
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="ToText" VerticalAlignment="Top" Margin="586,136,0,0" Width="302"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="ToText" VerticalAlignment="Top" Margin="286,136,0,0" Width="302"/>
 
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="SubText" VerticalAlignment="Top" Margin="586,217,0,0" Width="302"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="SubText" VerticalAlignment="Top" Margin="286,217,0,0" Width="302"/>
 
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Subject" FontSize="20" VerticalAlignment="Top" Margin="490,217,0,0"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Subject" FontSize="20" VerticalAlignment="Top" Margin="200,217,0,0"/>
 
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="MsgText" VerticalAlignment="Top" Margin="586,296,0,0" Width="302" Height="175"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="MsgText" VerticalAlignment="Top" Margin="286,296,0,0" Width="302" Height="175"/>
 
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Messag" FontSize="20" VerticalAlignment="Top" Margin="490,304,0,0"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Messag" FontSize="20" VerticalAlignment="Top" Margin="200,304,0,0"/>
 
-        <Button Content="Attach File" x:Name="AttachFileBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="586,502,0,0" Click="AttachFileBtn_Click"/>
+            <Button Content="Attach File" x:Name="AttachFileBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="286,502,0,0" Click="AttachFileBtn_Click"/>
 
-        <Button Content="Send" x:Name="SendBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="783,502,0,0" Width="105" Click="SendBtn_Click"/>
+            <Button Content="Send" x:Name="SendBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="483,502,0,0" Width="105" Click="SendBtn_Click"/>
+        </Grid>
 
+        <Grid Grid.Column="1">
+            <ListView Name="list"/>
+        </Grid>
     </Grid>
 </Page>

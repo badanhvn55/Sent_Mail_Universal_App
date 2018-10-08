@@ -214,3 +214,8 @@ D:\Learn\C#\App_Send_Mail\App_Send_Mail\obj\x86\Debug\MultipleQualifiersPerDimen
 D:\Learn\C#\App_Send_Mail\App_Send_Mail\obj\x86\Debug\ProjectArchitectures.txt
 D:\Learn\C#\App_Send_Mail\App_Send_Mail\bin\x86\Debug\MailForWindowsStore.dll
 D:\Learn\C#\App_Send_Mail\App_Send_Mail\bin\x86\Debug\MailForWindowsStore.xml
+D:\Learn\C#\App_Send_Mail\App_Send_Mail\bin\x86\Debug\Inbox.xbf
+D:\Learn\C#\App_Send_Mail\App_Send_Mail\obj\x86\Debug\Inbox.g.i.cs
+D:\Learn\C#\App_Send_Mail\App_Send_Mail\obj\x86\Debug\Inbox.g.cs
+D:\Learn\C#\App_Send_Mail\App_Send_Mail\obj\x86\Debug\Inbox.xaml
+D:\Learn\C#\App_Send_Mail\App_Send_Mail\obj\x86\Debug\Inbox.xbf

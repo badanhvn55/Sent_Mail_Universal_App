@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Learn\C#\App_Send_Mail\App_Send_Mail\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-06T05:52:12.048</Modified>
+      <Modified>2018-10-08T04:20:59.585</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Learn\C#\App_Send_Mail\App_Send_Mail\bin\x86\Debug\App_Send_Mail.exe">
       <PackagePath>entrypoint\App_Send_Mail.exe</PackagePath>
-      <Modified>2018-10-06T05:52:09.344</Modified>
+      <Modified>2018-10-08T04:20:59.271</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ueda\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -495,7 +495,7 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T16:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ueda\Downloads\Compressed\MailForWindowsStore\Redistributables\MailForWindowsStore.dll">
+    <AppxPackagedFile Include="D:\Learn\C#\App_Send_Mail\App_Send_Mail\Assets\MailForWindowsStore\Redistributables\MailForWindowsStore.dll">
       <PackagePath>MailForWindowsStore.dll</PackagePath>
       <Modified>2017-11-08T19:11:12.207</Modified>
     </AppxPackagedFile>
@@ -539,7 +539,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Learn\C#\App_Send_Mail\App_Send_Mail\bin\x86\Debug\App_Send_Mail.xr.xml">
       <PackagePath>App_Send_Mail.xr.xml</PackagePath>
-      <Modified>2018-10-06T05:52:08.769</Modified>
+      <Modified>2018-10-08T04:19:55.370</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -548,11 +548,11 @@
     <AppxPackagedFile Include="D:\Learn\C#\App_Send_Mail\App_Send_Mail\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-06T05:52:11.486</Modified>
+      <Modified>2018-10-08T04:19:56.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Learn\C#\App_Send_Mail\App_Send_Mail\bin\x86\Debug\Core\App_Send_Mail.exe">
       <PackagePath>App_Send_Mail.exe</PackagePath>
-      <Modified>2018-10-06T05:52:12.040</Modified>
+      <Modified>2018-10-08T04:20:59.580</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

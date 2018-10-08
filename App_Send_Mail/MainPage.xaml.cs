@@ -19,6 +19,7 @@ using Windows.Storage;
 using Windows.UI.Popups;
 
 using Limilabs.Client.SMTP;
+using Limilabs.Client.IMAP;
 
 using Limilabs.Mail.Headers;
 
@@ -35,8 +36,8 @@ namespace App_Send_Mail
     {
 
         //THAY USER VỚI PASSWORD CỦA EMAIL VÀO DƯỚI ĐÂY NHA
-        string USER = "USER@gmail.com";
-        string PASSWORD = "PASSWORD";
+        string USER = "nguyengoc.195@gmail.com";
+        string PASSWORD = "futurefight";
 
         FileOpenPicker FilePick;
 
@@ -45,7 +46,48 @@ namespace App_Send_Mail
         public MainPage()
         {
             this.InitializeComponent();
+            receiveMail();
         }
+
+        private async void receiveMail()
+        {
+            using (Imap imap = new Imap())
+            {
+                await imap.ConnectSSL("imap.gmail.com");
+                await imap.UseBestLoginAsync(USER, PASSWORD);
+                await imap.SelectInboxAsync();
+                List<long> uids = await imap.SearchAsync(Flag.Unseen);
+                foreach (long uid in uids)
+                {
+                    var eml = await imap.GetMessageByUIDAsync(uid);
+                    IMail mail = new MailBuilder().CreateFromEml(eml);
+                    //Console.WriteLine(mail.Subject);
+                    //Console.WriteLine(mail.Text);
+                    string content = mail.Subject;
+                    list.Items.Add(content);
+                }
+                await imap.CloseAsync();
+            }
+
+        }
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Assign DataTemplate for selected items
+            foreach (var item in e.AddedItems)
+            {
+                ListViewItem lvi = (sender as ListView).ContainerFromItem(item) as ListViewItem;
+                lvi.ContentTemplate = (DataTemplate)this.Resources["Detail"];
+            }
+            //Remove DataTemplate for unselected items
+            foreach (var item in e.RemovedItems)
+            {
+                ListViewItem lvi = (sender as ListView).ContainerFromItem(item) as ListViewItem;
+                lvi.ContentTemplate = (DataTemplate)this.Resources["Normal"];
+            }
+        }
+
+
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
 

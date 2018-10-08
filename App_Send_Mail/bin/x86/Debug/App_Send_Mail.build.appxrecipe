@@ -370,7 +370,7 @@
     <AppxPackagedFile Include="C:\Users\ueda\.nuget\packages\system.xml.xmlserializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ueda\Downloads\Compressed\MailForWindowsStore\Redistributables\MailForWindowsStore.dll">
+    <AppxPackagedFile Include="D:\Learn\C#\App_Send_Mail\App_Send_Mail\Assets\MailForWindowsStore\Redistributables\MailForWindowsStore.dll">
       <PackagePath>MailForWindowsStore.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Learn\C#\App_Send_Mail\App_Send_Mail\Properties\Default.rd.xml">
